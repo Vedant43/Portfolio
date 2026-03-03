@@ -1224,3 +1224,14 @@ body {
   .pcard { padding: 24px; }
   .ecard { padding: 20px 20px 20px 24px; }
 }
+
+/* Design tokens */
+:root {
+  --accent: #6366f1;
+  --accent2: #a855f7;
+  --bg: #0f0f1a;
+  --surface: rgba(255,255,255,0.04);
+  --border: rgba(255,255,255,0.08);
+  --text: #e2e8f0;
+  --muted: rgba(255,255,255,0.5);
+}
