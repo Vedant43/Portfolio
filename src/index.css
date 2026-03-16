@@ -1235,3 +1235,10 @@ body {
   --text: #e2e8f0;
   --muted: rgba(255,255,255,0.5);
 }
+
+.navbar { position:sticky; top:0; z-index:100; backdrop-filter:blur(20px); background:rgba(10,10,20,0.8); border-bottom:1px solid var(--border); padding:16px 40px; display:flex; justify-content:space-between; align-items:center; transition: box-shadow 0.3s; }
+.navbar.scrolled { box-shadow: 0 4px 24px rgba(0,0,0,0.4); }
+.logo { font-size:22px; font-weight:800; background: linear-gradient(135deg, var(--accent), var(--accent2)); -webkit-background-clip:text; -webkit-text-fill-color:transparent; }
+.nav-links { list-style:none; display:flex; gap:32px; }
+.nav-links a { color:var(--muted); text-decoration:none; font-size:14px; font-weight:500; transition:color 0.2s; }
+.nav-links a:hover { color:var(--text); }
