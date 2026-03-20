@@ -1258,3 +1258,7 @@ body {
 .btn-primary:hover { opacity:0.85; }
 .btn-ghost { padding:10px 20px; border-radius:8px; border:1px solid var(--border); color:var(--text); text-decoration:none; font-size:13px; font-weight:600; transition:border-color 0.2s; }
 .btn-ghost:hover { border-color:var(--accent); color:var(--accent); }
+
+.reveal { opacity:0; transform:translateY(30px); transition: opacity 0.6s ease, transform 0.6s ease; }
+.reveal.revealed { opacity:1; transform:none; }
+::-webkit-scrollbar { width:6px; } ::-webkit-scrollbar-track { background:var(--bg); } ::-webkit-scrollbar-thumb { background:var(--accent); border-radius:3px; }
