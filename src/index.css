@@ -1274,3 +1274,6 @@ body {
 
 @media(max-width:768px) { .hero h1 { font-size:2.2rem; } .navbar { padding:12px 20px; } .nav-links { gap:16px; } }
 @media(max-width:640px) { .project-card { padding:18px; } .nav-links li:not(:last-child) { display:none; } }
+
+::selection { background:rgba(99,102,241,0.3); color:var(--text); }
+* { -webkit-font-smoothing:antialiased; box-sizing:border-box; }
