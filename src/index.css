@@ -1279,3 +1279,8 @@ body {
 * { -webkit-font-smoothing:antialiased; box-sizing:border-box; }
 
 .project-card { will-change: transform; }
+
+.timeline { list-style:none; padding:0; border-left:2px solid var(--border); margin-left:12px; }
+.timeline-item { position:relative; padding:0 0 32px 24px; }
+.timeline-dot { position:absolute; left:-7px; top:4px; width:12px; height:12px; border-radius:50%; background:var(--accent); border:2px solid var(--bg); }
+.timeline-date { font-size:12px; color:var(--muted); margin-left:12px; }
