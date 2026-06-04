@@ -7,3 +7,5 @@ export function useFilter(items, key) {
   );
   return { filtered, filter, setFilter };
 }
+
+// filter by multiple tags supported
