@@ -16,3 +16,5 @@ export default function Navbar() {
     </nav>
   );
 }
+
+// active section detection via IntersectionObserver
