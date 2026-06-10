@@ -10,3 +10,5 @@ export default function ContactLinks() {
     </div>
   );
 }
+
+// Resume download button stub
