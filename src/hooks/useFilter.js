@@ -9,3 +9,5 @@ export function useFilter(items, key) {
 }
 
 // filter by multiple tags supported
+
+// useMemo applied to filtered result
