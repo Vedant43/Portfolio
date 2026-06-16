@@ -26,3 +26,6 @@ npm run dev
 npm run build
 # deploy dist/ to Vercel
 ```
+
+## 🌐 Live
+https://bhavik41.vercel.app
