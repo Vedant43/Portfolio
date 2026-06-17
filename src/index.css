@@ -1287,3 +1287,6 @@ body {
 
 .orb { position:absolute; border-radius:50%; filter:blur(80px); opacity:0.15; animation: float 8s ease-in-out infinite; }
 @keyframes float { 0%,100%{transform:translateY(0)} 50%{transform:translateY(-30px)} }
+
+/* final polish */
+body { background: var(--bg); color: var(--text); }
