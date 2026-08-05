@@ -1,8 +1,8 @@
 export default function ContactLinks() {
   const links = [
-    { label:"Email", href:"mailto:bhavikpatel773241@gmail.com" },
-    { label:"GitHub", href:"https://github.com/bhavik41" },
-    { label:"LinkedIn", href:"https://linkedin.com/in/bhavik41" },
+    { label:"Email", href:"mailto:vedant.suthar03@gmail@gmail.com" },
+    { label:"GitHub", href:"https://github.com/Vedant43" },
+    { label:"LinkedIn", href:"https://linkedin.com/in/Vedant43" },
   ];
   return (
     <div className="contact-links">

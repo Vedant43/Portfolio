@@ -221,29 +221,15 @@ function Card3D({ group, index }) {
    DATA
 ═══════════════════════════════════════════════════════════ */
 const SKILL_GROUPS = [
-  { icon: <Code2 size={16}/>,     title: 'Languages',         color: 'cyan',    span: 1, skills: ['JavaScript', 'TypeScript', 'Python', 'Java', 'C', 'C++'] },
-  { icon: <Layers size={16}/>,    title: 'Front-End',         color: 'violet',  span: 2, skills: ['React.js', 'Next.js', 'HTML5', 'CSS3', 'Tailwind CSS', 'Bootstrap', 'Redux', 'jQuery'] },
-  { icon: <Settings size={16}/>,  title: 'Back-End',          color: 'rose',    span: 2, skills: ['Node.js', 'Express.js', 'REST APIs', 'Spring Boot', 'FastAPI'] },
-  { icon: <Database size={16}/>,  title: 'Databases & ORMs',  color: 'emerald', span: 1, skills: ['MongoDB', 'MySQL', 'PostgreSQL', 'Oracle', 'SQL Server', 'Redis', 'Prisma', 'TypeORM'] },
-  { icon: <Cloud size={16}/>,     title: 'Cloud & DevOps',    color: 'amber',   span: 1, skills: ['AWS', 'Vercel', 'Render', 'DigitalOcean', 'GCP', 'Git', 'GitHub', 'CI/CD'] },
+  { icon: <Code2 size={16}/>,     title: 'Languages',         color: 'cyan',    span: 1, skills: ['JavaScript', 'TypeScript', 'Python', 'Java', '.NET', 'C++'] },
+  { icon: <Layers size={16}/>,    title: 'Front-End',         color: 'violet',  span: 2, skills: ['React.js', 'Angular', 'HTML5', 'CSS3', 'Tailwind CSS', 'Bootstrap', 'Redux', 'jQuery'] },
+  { icon: <Settings size={16}/>,  title: 'Back-End',          color: 'rose',    span: 2, skills: ['Node.js', 'Express.js', 'REST APIs', '.NET Core', 'FastAPI'] },
+  { icon: <Database size={16}/>,  title: 'Databases & ORMs',  color: 'emerald', span: 1, skills: ['Prisma', 'MongoDB', 'MySQL', 'PostgreSQL', 'Redis', 'TypeORM'] },
+  { icon: <Cloud size={16}/>,     title: 'Cloud & DevOps',    color: 'amber',   span: 1, skills: ['AWS', 'Vercel', 'Render', 'DigitalOcean', 'GCP', 'Git', 'GitHub'] },
   { icon: <Wrench size={16}/>,    title: 'Tools & Practices', color: 'indigo',  span: 2, skills: ['Postman', 'Jira', 'VS Code', 'IntelliJ IDEA', 'PyCharm', 'Agile', 'SDLC', 'Code Reviews', 'Debugging', 'Testing', 'SharePoint', 'MS Office'] },
 ];
 
 const ACADEMIC_PROJECTS = [
-  {
-    category: 'Academic Project',
-    title: 'DB-Git — Database Schema Version Control',
-    period: 'May 2026',
-    location: 'University of Windsor · Windsor, Ontario',
-    tech: ['Node.js', 'TypeScript', 'MySQL', 'PostgreSQL', 'CLI', 'JSON'],
-    color: '#14b8a6',
-    github: 'https://github.com/bhavik41/DB_Git',
-    bullets: [
-      'Git-inspired CLI tool to version-control database schemas — commit, diff, log, and rollback schema changes.',
-      'Captures schema snapshots with commit messages and timestamps, maintaining a full history of structural changes.',
-      'Automated migration script generation from schema diffs, with support for MySQL and PostgreSQL.',
-    ],
-  },
   {
     category: 'Academic Project',
     title: 'AI-Powered Collaborative Coding Platform',
@@ -267,82 +253,11 @@ const ACADEMIC_PROJECTS = [
 const PERSONAL_PROJECTS = [
   {
     category: 'Personal Project',
-    title: 'SportSlot — Sports Venue Booking Platform',
-    period: 'Jun 2026',
-    tech: ['React.js', 'Node.js', 'Express.js', 'MongoDB', 'Tailwind CSS', 'JWT', 'REST APIs'],
-    color: '#f97316',
-    github: [
-      { label: 'Frontend', url: 'https://github.com/bhavik41/sportvenueFrontend' },
-      { label: 'Backend',  url: 'https://github.com/bhavik41/sportsvenueBackend' },
-    ],
-    bullets: [
-      'Two-sided marketplace bridging venue owners and players — owners list underutilized slots at competitive rates, cutting revenue loss from empty courts while giving players access to 30–50% cheaper bookings.',
-      'Dynamic time-slot engine with real-time availability calendar, conflict-free double-booking prevention, and owner-controlled peak/off-peak pricing and promotional offers.',
-      'Dual-dashboard system: owners manage listings, track upcoming reservations, and run slot-level discounts; clients browse, book, cancel, and view full booking history — backed by 20+ REST API endpoints.',
-    ],
-  },
-  {
-    category: 'Personal Project',
-    title: 'VaultShare — Secured File Sharing System',
-    period: 'Jun 2025',
-    tech: ['TypeScript', 'React.js', 'Node.js', 'Express.js', 'Redux Toolkit', 'Tailwind CSS', 'JWT', '2FA (TOTP)'],
-    color: '#6366f1',
-    github: [
-      { label: 'Frontend', url: 'https://github.com/bhavik41/VaultShareFrontened' },
-      { label: 'Backend',  url: 'https://github.com/bhavik41/VaultShareBackend' },
-    ],
-    bullets: [
-      'Full-stack secure file sharing platform with AES encryption for stored files and SHA-256 hashing for integrity verification.',
-      'JWT auth with refresh token rotation, TOTP-based two-factor authentication via QR code, and password reset via Nodemailer.',
-      'File upload/download with Multer, shareable links, role-based access control, team invitations, and 15+ REST API endpoints.',
-    ],
-  },
-  {
-    category: 'Personal Project',
-    title: 'CampusRide — Student Ride-Sharing Platform',
-    period: 'Jun 2026',
-    tech: ['React 18', 'TypeScript', 'Vite', 'Tailwind CSS', 'Zustand', 'Node.js', 'Express', 'Prisma', 'SQLite', 'JWT', 'Zod'],
-    color: '#22c55e',
-    github: 'https://github.com/bhavik41/campusride',
-    bullets: [
-      'Full-stack ride-sharing platform like Poparide, supporting both long-distance intercity rides and short campus rides exclusive to verified students.',
-      'Student verification via .edu email detection or university profile — unlocks campus ride posting and booking with JWT-secured auth.',
-      'Complete booking system with seat management, cancellation, driver dashboard, and passenger details; Zod-validated REST API with Prisma ORM.',
-    ],
-  },
-  {
-    category: 'Personal Project',
-    title: 'Slack Lite — Real-Time Messenger',
-    period: 'May 2025',
-    tech: ['React.js', 'Node.js', 'Express.js', 'Socket.IO', 'MongoDB'],
-    color: '#f59e0b',
-    github: null,
-    bullets: [
-      'Full-stack real-time messaging app with 1:1 and group chat rooms persisted in MongoDB.',
-      'Socket.IO for instant message delivery, online/offline presence indicators, and live typing notifications.',
-      'Node.js + Express REST API with Mongoose schemas and full message history on reconnect.',
-    ],
-  },
-  {
-    category: 'Personal Project',
-    title: 'Virtual OS — Browser Desktop Environment',
-    period: 'Apr 2025',
-    tech: ['React.js', 'Zustand', 'react-rnd', 'JavaScript', 'CSS3'],
-    color: '#06b6d4',
-    github: null,
-    bullets: [
-      'Interactive browser-based desktop OS with draggable, resizable multi-window management via react-rnd.',
-      'Zustand store managing window lifecycle — open, minimize, maximize, close — across all sandboxed apps.',
-      'Modular app architecture enabling seamless addition of new desktop applications without core changes.',
-    ],
-  },
-  {
-    category: 'Personal Project',
     title: 'Diet Plan Recommendation System',
     period: 'Oct 2024 – Nov 2024',
     tech: ['MongoDB', 'Node.js', 'React.js', 'Tailwind CSS', 'OpenAI API'],
     color: '#a855f7',
-    github: 'https://github.com/bhavik41/diet_plan',
+    github: 'https://github.com/Vedant43/diet_plan-main',
     bullets: [
       'Personalized meal plans by analyzing user health goals, dietary restrictions, and food preferences.',
       'Prompt engineering techniques to improve accuracy of AI-driven nutritional recommendations.',
@@ -351,15 +266,29 @@ const PERSONAL_PROJECTS = [
   },
   {
     category: 'Personal Project',
-    title: 'Voice GPT',
-    period: 'Apr 2023 – May 2023',
-    tech: ['HTML', 'CSS', 'GPT API', 'Google Vision'],
-    color: '#f43f5e',
-    github: 'https://github.com/bhavik41/Voice-GPT',
+    title: 'Collab-ide',
+    period: 'Oct 2025 – Feb 2026',
+    tech: ['MongoDB', 'Node.js', 'React.js', 'Tailwind CSS', 'Socket.io', 'Monaco Editor'],
+    color: '#a855f7',
+    github: 'https://github.com/Vedant43/collab-IDE-main',
     bullets: [
-      'Web app enabling voice-powered interactions with GPT, supporting voice search and text-to-speech responses.',
-      'Real-time voice input with automated audio output for a seamless conversational UX.',
-      'Built before GPT\'s native TTS — demonstrating early adoption of AI-driven voice interfaces.',
+      'Built a real-time collaborative online IDE using React, Node.js, Socket.IO, Monaco Editor, and MongoDB, implementing Operational Transformation (OT) to enable conflict-free simultaneous code editing with live cursor tracking and presence awareness.',
+      'Designed and developed a scalable full-stack architecture featuring JWT authentication, role-based access control, multi-file project management, and resilient WebSocket synchronization with automatic reconnection, offline recovery, and local backup mechanisms.',
+      'Implemented a secure multi-language code execution system supporting JavaScript, Python, Java, C++, TypeScript, Go, Rust, and Ruby, with shared execution output, isolated execution environments, and real-time synchronization across all participants.',
+      'Engineered production-grade collaboration features including room invitations, read-only permissions, file sharing, import/export, notifications, responsive UI, and performance optimizations, delivering a VS Code–like collaborative coding experience for remote teams and technical interviews.'
+    ],
+  },
+  {
+    category: 'Personal Project',
+    title: 'NeoTube',
+    period: 'Jan 2025 – April 2025',
+    tech: ['Prisma ORM', 'Node.js', 'React.js', 'Tailwind CSS', 'Redux', 'Whisper AI'],
+    color: '#a855f7',
+    github: 'https://github.com/Vedant43/Neotube',
+    bullets: [
+      'Developed a full-stack YouTube-inspired platform using React, TypeScript, Node.js, Express, Prisma, and PostgreSQL, implementing JWT authentication, video uploads, playlists, watch history, likes, comments, and personalized recommendations.',
+      'Integrated AI-powered learning features by generating video transcripts and quizzes using Whisper and LLM APIs, with an asynchronous processing pipeline to improve scalability and reduce response times for long-running tasks.',
+      'Designed a scalable backend architecture with Prisma ORM, Cloudinary media storage, and optimized database queries, enabling efficient video management, secure authentication, and responsive user interactions across the platform.'
     ],
   },
 ];
@@ -411,51 +340,27 @@ const CLIENT_WORK = [
 
 const WORK_EXPERIENCE = [
   {
-    title: 'Full-Stack Software Engineer',
-    company: 'Shreeji Info Tech',
-    location: 'Ahmedabad, India',
-    period: 'Sep 2024 – Aug 2025',
-    tech: ['MongoDB', 'Express.js', 'React.js', 'Node.js', 'JavaScript', 'REST APIs'],
+    title: 'Software Engineer',
+    company: 'SpeedExam',
+    location: 'Gandhinagar, India',
+    period: 'June 2025 – Present',
+    tech: ['Angular', 'Typescript', '.NET Core', 'Python', 'REST APIs'],
     color: '#f59e0b',
     bullets: [
-      'Engineered and shipped 6+ production-grade web applications end-to-end using the MERN stack, serving 500+ active users across client industries.',
-      'Architected 25+ RESTful API endpoints with Node.js and Express; optimized MongoDB queries and indexing, cutting average response time by ~35%.',
-      'Built pixel-perfect React.js frontends with reusable component libraries, reducing UI development time by 40% on subsequent projects.',
-      'Led debugging and code review cycles that eliminated 3 critical production bugs and improved overall codebase maintainability.',
-    ],
-  },
-  {
-    title: 'MERN Stack Developer Intern',
-    company: 'Freshers Booth',
-    location: 'Ahmedabad, India',
-    period: 'Jun 2024 – Aug 2024',
-    tech: ['React.js', 'Express.js', 'JavaScript', 'HTML', 'CSS', 'APIs'],
-    color: '#06b6d4',
-    bullets: [
-      'Developed and maintained responsive full-stack app features using React.js, Express.js, and REST APIs.',
-      'Integrated Google Auth, Google Gemini, and LinkedIn APIs into authentication pipelines.',
-      'Debugging, testing, code reviews, and troubleshooting to improve quality and maintainability.',
-      'Feature planning and collaborative delivery within Agile sprint cycles.',
+      'Implemented robust client-side optimizations for an online examination system, including efficient request batching, improved asynchronous workflows, and enhanced browser storage management to ensure reliable exam delivery under heavy load.',
+      'Identified and resolved critical architectural and performance bottlenecks in a production Angular application, leading multiple codebase refactors that improved maintainability, readability, and long-term scalability.',
+      'Investigated and fixed complex production issues involving authentication, session management, proctoring workflows, browser events, and cross-browser compatibility, significantly improving platform stability and user experience.'
     ],
   },
 ];
 
 const EDUCATION = [
   {
-    degree: 'Master of Applied Computing',
-    school: 'University of Windsor',
-    location: 'Windsor, Ontario',
-    period: 'Aug 2025 – Present',
-    gpa: '3.1 / 4',
-    note: 'Available for 4 or 8-month co-op starting Sep 2026',
-    status: 'current',
-  },
-  {
-    degree: 'B.Sc. in Computer Science & Engineering',
+    degree: 'B.Tech in Computer Science & Engineering',
     school: 'Indus Institute of Technology & Engineering',
     location: 'Ahmedabad, India',
     period: 'Jul 2021 – May 2025',
-    gpa: '9.46 / 10',
+    gpa: '9.40 / 10',
     status: 'done',
   },
 ];
@@ -523,7 +428,7 @@ function Nav() {
       transition={{ duration: 0.55, ease: [0.22, 1, 0.36, 1] }}
     >
       <div className="nav__inner">
-        <a href="#hero" className="nav__brand">BT<span className="nav__dot">.</span></a>
+        <a href="#hero" className="nav__brand">VS<span className="nav__dot">.</span></a>
         <nav className="nav__links">
           {links.map((l, i) => (
             <motion.a key={l.id} href={`#${l.id}`} className="nav__link"
@@ -641,14 +546,14 @@ function Hero() {
 
       <div className="hero__content-layout">
         <div className="hero__inner" style={{ transform: `translateY(${y.get()}px)` }}>
-        <motion.div className="hero__pill"
+        {/* <motion.div className="hero__pill"
           initial={{ opacity: 0, y: -18 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.1 }}>
           <span className="hero__pulse" /> Available · Internship Sep 2026
-        </motion.div>
+        </motion.div> */}
 
         <h1 className="hero__name">
-          <AssembleText text="BHAVIK" inView={inView} className="hero__name-line hero__name-first" charDelay={0.04} baseDelay={0.1} />
-          <AssembleText text="THUMBADIYA" inView={inView} className="hero__name-line hero__name-last" charDelay={0.03} baseDelay={0.45} />
+          <AssembleText text="VEDANT" inView={inView} className="hero__name-line hero__name-first" charDelay={0.04} baseDelay={0.1} />
+          <AssembleText text="SUTHAR" inView={inView} className="hero__name-line hero__name-last" charDelay={0.03} baseDelay={0.45} />
         </h1>
 
         <div className="hero__role">
@@ -665,17 +570,17 @@ function Hero() {
 
         <motion.p className="hero__bio"
           initial={{ opacity: 0, y: 16 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 1.3 }}>
-          Full-stack developer building scalable MERN applications, real-time collaborative platforms,
-          and high-performance APIs. Skilled in Agile teams, cloud deployments, and clean architecture.
+          Full-stack developer building scalable MERN applications, Angular, .NET core applications, real-time collaborative platforms,
+          and high-performance APIs. Skilled in Agile teams and clean architecture.
         </motion.p>
 
         <motion.div className="hero__meta"
           initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: 1.5 }}>
-          <span><MapPin size={12}/> Windsor, Ontario</span>
-          <span className="hero__meta-sep">·</span>
+          <span><MapPin size={12}/> Gandhinagar, Gujarat</span>
+          {/* <span className="hero__meta-sep">·</span>
           <span><GraduationCap size={12}/> MAC · UWindsor · 3.1 GPA</span>
           <span className="hero__meta-sep">·</span>
-          <span>B.Sc. CS · 9.46/10</span>
+          <span>B.Sc. CS · 9.46/10</span> */}
         </motion.div>
 
         <motion.div className="hero__ctas"
@@ -686,10 +591,10 @@ function Hero() {
           <motion.a href="/resume.pdf" download className="cta cta--ghost" whileHover={{ scale: 1.04 }} whileTap={{ scale: 0.97 }}>
             <Download size={14}/> Resume
           </motion.a>
-          <motion.a href="https://github.com/bhavik41" target="_blank" rel="noreferrer" className="cta cta--ghost" whileHover={{ scale: 1.04 }} whileTap={{ scale: 0.97 }}>
+          <motion.a href="https://github.com/Vedant43" target="_blank" rel="noreferrer" className="cta cta--ghost" whileHover={{ scale: 1.04 }} whileTap={{ scale: 0.97 }}>
             <IconGithub size={14}/> GitHub
           </motion.a>
-          <motion.a href="https://linkedin.com/in/bhavik-thumbadiya-192868272" target="_blank" rel="noreferrer" className="cta cta--ghost" whileHover={{ scale: 1.04 }} whileTap={{ scale: 0.97 }}>
+          <motion.a href="https://www.linkedin.com/in/vedant-suthar-49388822a" target="_blank" rel="noreferrer" className="cta cta--ghost" whileHover={{ scale: 1.04 }} whileTap={{ scale: 0.97 }}>
             <IconLinkedin size={14}/> LinkedIn
           </motion.a>
         </motion.div>
@@ -701,7 +606,7 @@ function Hero() {
       </div>
 
       {/* floating stats */}
-      <motion.div className="hero__stats"
+      {/*<motion.div className="hero__stats"
         initial={{ opacity: 0, x: 50 }} animate={{ opacity: 1, x: 0 }} transition={{ delay: 1.8, duration: 0.7 }}>
         {[
           { v: '50+',   l: 'Concurrent Users' },
@@ -715,6 +620,7 @@ function Hero() {
           </div>
         ))}
       </motion.div>
+      */}
 
       {/* 3D perspective floor grid */}
       <div className="hero__floor-outer">
@@ -930,12 +836,12 @@ function Projects() {
           </motion.h2>
         </div>
         
-        <div style={{ marginBottom: '60px' }}>
+        {/* <div style={{ marginBottom: '60px' }}>
           <h3 className="section__sub-heading" style={{ marginBottom: '24px', fontSize: '20px', color: '#06b6d4' }}>Academic Projects</h3>
           <div className="projects__grid">
             {ACADEMIC_PROJECTS.map((p, i) => <ProjectCard key={p.title} project={p} index={i} />)}
           </div>
-        </div>
+        </div> */}
 
         <div>
           <h3 className="section__sub-heading" style={{ marginBottom: '24px', fontSize: '20px', color: '#a855f7' }}>Personal Projects</h3>
@@ -1105,11 +1011,11 @@ function Contact() {
   };
 
   const LINKS = [
-    { icon: <Mail size={15}/>,        label: 'Email',    val: 'bhavikpatel73241@gmail.com', href: 'mailto:bhavikpatel73241@gmail.com' },
-    { icon: <Phone size={15}/>,       label: 'Phone',    val: '+1 (647) 382-0767',          href: 'tel:+16473820767' },
-    { icon: <IconGithub size={15}/>,  label: 'GitHub',   val: 'github.com/bhavik41',        href: 'https://github.com/bhavik41',                              ext: true },
-    { icon: <IconLinkedin size={15}/>,label: 'LinkedIn', val: 'Bhavik Thumbadiya',           href: 'https://linkedin.com/in/bhavik-thumbadiya-192868272',     ext: true },
-    { icon: <MapPin size={15}/>,      label: 'Location', val: 'Windsor, Ontario, Canada' },
+    { icon: <Mail size={15}/>,        label: 'Email',    val: 'vedant.suthar03@gmail.com', href: 'mailto:vedant.suthar03@gmail.com' },
+    { icon: <Phone size={15}/>,       label: 'Phone',    val: '+91 8401299536',          href: 'tel:+918401299536' },
+    { icon: <IconGithub size={15}/>,  label: 'GitHub',   val: 'github.com/Vedant43',        href: 'https://github.com/Vedant43',                              ext: true },
+    { icon: <IconLinkedin size={15}/>,label: 'LinkedIn', val: 'Vedant Suthar',           href: 'https://www.linkedin.com/in/vedant-suthar-49388822a',     ext: true },
+    { icon: <MapPin size={15}/>,      label: 'Location', val: 'Gandhinagar, Gujarat' },
   ];
 
   return (
@@ -1202,12 +1108,12 @@ function Footer() {
   return (
     <footer className="footer">
       <div className="footer__inner">
-        <span className="footer__brand">BT.</span>
-        <p className="footer__copy">© 2026 Bhavik Thumbadiya · Full-Stack Software Developer · Windsor, Ontario</p>
+        <span className="footer__brand">VS.</span>
+        <p className="footer__copy">© 2026 Vedant Suthar · Software Developer · Gandhinagar, Gujarat</p>
         <div className="footer__links">
-          <a href="https://github.com/bhavik41" target="_blank" rel="noreferrer">GitHub</a>
-          <a href="https://linkedin.com/in/bhavik-thumbadiya-192868272" target="_blank" rel="noreferrer">LinkedIn</a>
-          <a href="mailto:bhavikpatel73241@gmail.com">Email</a>
+          <a href="https://github.com/Vedant43" target="_blank" rel="noreferrer">GitHub</a>
+          <a href="https://www.linkedin.com/in/vedant-suthar-49388822a/" target="_blank" rel="noreferrer">LinkedIn</a>
+          <a href="mailto:vedant.suthar03@gmail.com">Email</a>
         </div>
       </div>
     </footer>
@@ -1225,7 +1131,7 @@ export default function App() {
       <Hero />
       <Section3D><Skills /></Section3D>
       <Section3D><Projects /></Section3D>
-      <Section3D><ClientWork /></Section3D>
+      {/* <Section3D><ClientWork /></Section3D> */}
       <Section3D><Experience /></Section3D>
       <Section3D><EducationSection /></Section3D>
       <Section3D><Contact /></Section3D>
