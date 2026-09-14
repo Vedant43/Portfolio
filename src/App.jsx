@@ -221,12 +221,12 @@ function Card3D({ group, index }) {
    DATA
 ═══════════════════════════════════════════════════════════ */
 const SKILL_GROUPS = [
-  { icon: <Code2 size={16}/>,     title: 'Languages',         color: 'cyan',    span: 1, skills: ['JavaScript', 'TypeScript', 'Python', 'Java', '.NET', 'C++'] },
-  { icon: <Layers size={16}/>,    title: 'Front-End',         color: 'violet',  span: 2, skills: ['React.js', 'Angular', 'HTML5', 'CSS3', 'Tailwind CSS', 'Bootstrap', 'Redux', 'jQuery'] },
-  { icon: <Settings size={16}/>,  title: 'Back-End',          color: 'rose',    span: 2, skills: ['Node.js', 'Express.js', 'REST APIs', '.NET Core', 'FastAPI'] },
-  { icon: <Database size={16}/>,  title: 'Databases & ORMs',  color: 'emerald', span: 1, skills: ['Prisma', 'MongoDB', 'MySQL', 'PostgreSQL', 'Redis', 'TypeORM'] },
-  { icon: <Cloud size={16}/>,     title: 'Cloud & DevOps',    color: 'amber',   span: 1, skills: ['AWS', 'Vercel', 'Render', 'DigitalOcean', 'GCP', 'Git', 'GitHub'] },
-  { icon: <Wrench size={16}/>,    title: 'Tools & Practices', color: 'indigo',  span: 2, skills: ['Postman', 'Jira', 'VS Code', 'IntelliJ IDEA', 'PyCharm', 'Agile', 'SDLC', 'Code Reviews', 'Debugging', 'Testing', 'SharePoint', 'MS Office'] },
+  { icon: <Code2 size={16}/>,     title: 'Languages',         color: 'cyan',    span: 1, skills: ['JavaScript', 'TypeScript', 'Python', 'SQL'] },
+  { icon: <Layers size={16}/>,    title: 'Front-End',         color: 'violet',  span: 2, skills: ['React', 'Next.js', 'Angular', 'Tailwind CSS', 'Redux Toolkit'] },
+  { icon: <Settings size={16}/>,  title: 'Back-End',          color: 'rose',    span: 2, skills: ['Node.js', 'Express.js', 'FastAPI', 'ASP.NET Core', 'REST APIs', 'WebSockets'] },
+  { icon: <Database size={16}/>,  title: 'Databases & ORMs',  color: 'emerald', span: 1, skills: ['PostgreSQL', 'MongoDB', 'SQLite', 'Prisma ORM'] },
+  { icon: <Cloud size={16}/>,     title: 'Cloud & DevOps',    color: 'amber',   span: 1, skills: ['GCP', 'AWS', 'Docker', 'GitHub Actions', 'Git', 'Linux'] },
+  { icon: <Wrench size={16}/>,    title: 'AI & Tools',        color: 'indigo',  span: 2, skills: ['Ollama', 'FAISS', 'Claude Code', 'Antigravity CLI', 'GitHub Copilot', 'Postman'] },
 ];
 
 const ACADEMIC_PROJECTS = [
@@ -253,15 +253,43 @@ const ACADEMIC_PROJECTS = [
 const PERSONAL_PROJECTS = [
   {
     category: 'Personal Project',
-    title: 'Diet Plan Recommendation System',
-    period: 'Oct 2024 – Nov 2024',
-    tech: ['MongoDB', 'Node.js', 'React.js', 'Tailwind CSS', 'OpenAI API'],
+    title: 'VaultFS — Cloud File Management Platform',
+    period: '2025 – In Progress',
+    tech: ['Next.js', 'Node.js', 'PostgreSQL', 'GCP', 'Docker'],
     color: '#a855f7',
-    github: 'https://github.com/Vedant43/diet_plan-main',
+    github: 'https://github.com/Vedant43',
     bullets: [
-      'Personalized meal plans by analyzing user health goals, dietary restrictions, and food preferences.',
-      'Prompt engineering techniques to improve accuracy of AI-driven nutritional recommendations.',
-      'Comprehensive nutrient breakdowns, meal notes, and guidelines — nutritional database with 500+ food items.',
+      'Built a Google Drive-inspired file management platform using Next.js, React, Tailwind CSS, and Node.js/Express, supporting authentication, folder hierarchy, file uploads/downloads, search, and sharing.',
+      'Designed RESTful backend services with PostgreSQL for users, files, folders, permissions, and metadata, integrating GCP Cloud Storage for scalable object storage.',
+      'Implemented asynchronous file-processing jobs and scheduled background tasks, with Dockerized services and GitHub Actions for automated testing and deployment.'
+    ],
+  },
+  {
+    category: 'Personal Project',
+    title: 'StackSignal',
+    period: '2025',
+    tech: ['Node.js', 'Express', 'React', 'Prisma ORM', 'PostgreSQL'],
+    color: '#f59e0b',
+    github: [
+      { label: 'Live Demo', url: 'https://stacksignal.vedantsuthar.in' }
+    ],
+    bullets: [
+      'Built an embeddable JavaScript SDK for bug reporting, capturing console logs, network requests, and contextual metadata from third-party web applications.',
+      'Architected a widget-to-backend data pipeline using Node.js, Express.js, and PostgreSQL (Prisma ORM) to ingest and persist client-side debugging data in real time.',
+      'Developed a React dashboard enabling developers to inspect bug reports and correlated technical logs, reducing issue diagnosis time.',
+      'Implemented JWT-based authentication and RESTful APIs for managing projects, bug reports, and captured debugging sessions.'
+    ],
+  },
+  {
+    category: 'Personal Project',
+    title: 'NeoTube — Full-Stack Video Platform',
+    period: 'Jan 2025 – April 2025',
+    tech: ['React', 'Node.js', 'FastAPI', 'PostgreSQL'],
+    color: '#10b981',
+    github: 'https://github.com/Vedant43/Neotube',
+    bullets: [
+      'Built a video-sharing platform with JWT authentication, playlists, subscriptions, comments, watch history, and Cloudinary-based media storage.',
+      'Developed FastAPI services using Whisper/OpenAI for transcript and quiz generation with WebSocket-based progress tracking.'
     ],
   },
   {
@@ -269,28 +297,27 @@ const PERSONAL_PROJECTS = [
     title: 'Collab-ide',
     period: 'Oct 2025 – Feb 2026',
     tech: ['MongoDB', 'Node.js', 'React.js', 'Tailwind CSS', 'Socket.io', 'Monaco Editor'],
-    color: '#a855f7',
+    color: '#3b82f6',
     github: 'https://github.com/Vedant43/collab-IDE-main',
     bullets: [
       'Built a real-time collaborative online IDE using React, Node.js, Socket.IO, Monaco Editor, and MongoDB, implementing Operational Transformation (OT) to enable conflict-free simultaneous code editing with live cursor tracking and presence awareness.',
       'Designed and developed a scalable full-stack architecture featuring JWT authentication, role-based access control, multi-file project management, and resilient WebSocket synchronization with automatic reconnection, offline recovery, and local backup mechanisms.',
       'Implemented a secure multi-language code execution system supporting JavaScript, Python, Java, C++, TypeScript, Go, Rust, and Ruby, with shared execution output, isolated execution environments, and real-time synchronization across all participants.',
-      'Engineered production-grade collaboration features including room invitations, read-only permissions, file sharing, import/export, notifications, responsive UI, and performance optimizations, delivering a VS Code–like collaborative coding experience for remote teams and technical interviews.'
     ],
   },
   {
     category: 'Personal Project',
-    title: 'NeoTube',
-    period: 'Jan 2025 – April 2025',
-    tech: ['Prisma ORM', 'Node.js', 'React.js', 'Tailwind CSS', 'Redux', 'Whisper AI'],
-    color: '#a855f7',
-    github: 'https://github.com/Vedant43/Neotube',
+    title: 'Diet Plan Recommendation System',
+    period: 'Oct 2024 – Nov 2024',
+    tech: ['MongoDB', 'Node.js', 'React.js', 'Tailwind CSS', 'OpenAI API'],
+    color: '#ec4899',
+    github: 'https://github.com/Vedant43/diet_plan-main',
     bullets: [
-      'Developed a full-stack YouTube-inspired platform using React, TypeScript, Node.js, Express, Prisma, and PostgreSQL, implementing JWT authentication, video uploads, playlists, watch history, likes, comments, and personalized recommendations.',
-      'Integrated AI-powered learning features by generating video transcripts and quizzes using Whisper and LLM APIs, with an asynchronous processing pipeline to improve scalability and reduce response times for long-running tasks.',
-      'Designed a scalable backend architecture with Prisma ORM, Cloudinary media storage, and optimized database queries, enabling efficient video management, secure authentication, and responsive user interactions across the platform.'
+      'Personalized meal plans by analyzing user health goals, dietary restrictions, and food preferences.',
+      'Prompt engineering techniques to improve accuracy of AI-driven nutritional recommendations.',
+      'Comprehensive nutrient breakdowns, meal notes, and guidelines — nutritional database with 500+ food items.',
     ],
-  },
+  }
 ];
 
 const CLIENT_WORK = [
@@ -340,18 +367,44 @@ const CLIENT_WORK = [
 
 const WORK_EXPERIENCE = [
   {
-    title: 'Software Engineer',
+    title: 'Software Developer',
     company: 'SpeedExam',
-    location: 'Gandhinagar, India',
-    period: 'June 2025 – Present',
-    tech: ['Angular', 'Typescript', '.NET Core', 'Python', 'REST APIs'],
+    location: 'Gandhinagar, Gujarat',
+    period: 'Jun 2025 – Present',
+    tech: ['Angular', 'TypeScript', '.NET Core', 'face-api.js', 'SignalR'],
     color: '#f59e0b',
     bullets: [
-      'Implemented robust client-side optimizations for an online examination system, including efficient request batching, improved asynchronous workflows, and enhanced browser storage management to ensure reliable exam delivery under heavy load.',
-      'Identified and resolved critical architectural and performance bottlenecks in a production Angular application, leading multiple codebase refactors that improved maintainability, readability, and long-term scalability.',
-      'Investigated and fixed complex production issues involving authentication, session management, proctoring workflows, browser events, and cross-browser compatibility, significantly improving platform stability and user experience.'
+      'Developed browser-based face liveness verification using face-api.js and MediaPipe FaceMesh with active blink, turn, and nod challenges.',
+      'Built AI-assisted proctoring with audio human-voice detection, browser-tab monitoring, and SignalR-based real-time exam suspension notifications.',
+      'Designed permission-driven ASP.NET Core APIs replacing a legacy VB.NET/ASPX system and contributed to Angular v19→v21 migration.',
+      'Integrated Piston API for multi-language code execution and optimized frontend/API usage, reducing page load times by 40%.'
     ],
   },
+  {
+    title: 'Founding Engineer',
+    company: 'Zoffer.ai',
+    location: 'Remote',
+    period: 'Sep 2025 – Nov 2025',
+    tech: ['FastAPI', 'Python', 'SQLite', 'FAISS', 'OpenAI'],
+    color: '#10b981',
+    bullets: [
+      'Built Zoffer, a conversational automation platform integrating Twilio WhatsApp, FastAPI, and Zoho Books to execute accounting operations through natural-language messages.',
+      'Designed backend services for conversation handling, request routing, Zoho API integration, and persistent state using SQLite.',
+      'Built semantic intent routing using FAISS and OpenAI embeddings, with a two-stage Gemini pipeline for extracting fields from deeply nested Zoho API schemas.',
+      'Developed schema indexing and retrieval using object flattening, keyword caching, and field-synonym mappings to improve API operation and field resolution.'
+    ],
+  },
+  {
+    title: 'ReactJS Intern',
+    company: 'Brands.live',
+    location: 'Ahmedabad, Gujarat',
+    period: 'Feb 2025 – May 2025',
+    tech: ['React', 'REST APIs', 'JavaScript'],
+    color: '#6366f1',
+    bullets: [
+      'Developed React components and integrated REST APIs for dynamic web application features.'
+    ],
+  }
 ];
 
 const EDUCATION = [
@@ -370,6 +423,15 @@ const EDUCATION = [
 ═══════════════════════════════════════════════════════════ */
 function Section3D({ children }) {
   const ref = useRef(null);
+  const [isMobile, setIsMobile] = useState(false);
+  
+  useEffect(() => {
+    const checkMobile = () => setIsMobile(window.innerWidth < 768);
+    checkMobile();
+    window.addEventListener('resize', checkMobile);
+    return () => window.removeEventListener('resize', checkMobile);
+  }, []);
+
   const { scrollYProgress } = useScroll({
     target: ref,
     offset: ['start 0.95', 'start 0.2'],
@@ -391,7 +453,14 @@ function Section3D({ children }) {
 
   return (
     <div ref={ref} className="s3d-wrapper">
-      <motion.div className="s3d-inner" style={{ rotateX, scale, opacity, y, transformOrigin: 'center 85%' }}>
+      <motion.div 
+        className="s3d-inner" 
+        style={
+          isMobile 
+            ? { opacity, y } // Simpler animation for mobile 
+            : { rotateX, scale, opacity, y, transformOrigin: 'center 85%', willChange: 'transform, opacity' }
+        }
+      >
         {children}
       </motion.div>
     </div>
@@ -413,9 +482,8 @@ function Nav() {
   const links = [
     { label: 'Skills', id: 'skills' },
     { label: 'Projects', id: 'projects' },
-    { label: 'Client Work', id: 'client-work' },
     { label: 'Experience', id: 'experience' },
-    { label: 'Edu', id: 'education' },
+    { label: 'Education', id: 'education' },
   ];
 
   const close = () => setMobileOpen(false);
@@ -487,7 +555,7 @@ function AssembleCube({ scrollY }) {
 
   return (
     <div className="cube-wrapper" ref={ref}>
-      <motion.div className="cube" style={{ rotateX, rotateY }}
+      <motion.div className="cube" style={{ rotateX, rotateY, willChange: 'transform' }}
         animate={{ y: [-15, 15, -15] }}
         transition={{ duration: 6, repeat: Infinity, ease: "easeInOut" }}>
         
@@ -497,6 +565,7 @@ function AssembleCube({ scrollY }) {
             initial={f.scattered}
             animate={inView ? f.assembled : f.scattered}
             transition={{ duration: 1.4, delay: i * 0.12, type: 'spring', stiffness: 35, damping: 11 }}
+            style={{ willChange: 'transform, opacity' }}
           >
             <div className="cube__face-inner" />
             <div className="cube__face-cross" />
@@ -505,6 +574,7 @@ function AssembleCube({ scrollY }) {
 
         {/* Inner Glowing Core */}
         <motion.div className="cube__core"
+          style={{ willChange: 'transform' }}
           animate={{ rotateX: [0, 360], rotateY: [0, -360], scale: [0.8, 1, 0.8] }}
           transition={{ duration: 8, repeat: Infinity, ease: 'linear' }}
         >
@@ -521,7 +591,7 @@ function AssembleCube({ scrollY }) {
 /* ═══════════════════════════════════════════════════════════
    HERO
 ═══════════════════════════════════════════════════════════ */
-const ROLES = ['Full-Stack Developer', 'MERN Stack Engineer', 'Real-Time Systems Builder', 'TypeScript Architect'];
+const ROLES = ['Full-Stack Developer', 'AI Integrations Engineer', 'Real-Time Systems Builder', 'TypeScript Architect'];
 
 function Hero() {
   const ref = useRef(null);
@@ -570,8 +640,7 @@ function Hero() {
 
         <motion.p className="hero__bio"
           initial={{ opacity: 0, y: 16 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 1.3 }}>
-          Full-stack developer building scalable MERN applications, Angular, .NET core applications, real-time collaborative platforms,
-          and high-performance APIs. Skilled in Agile teams and clean architecture.
+          Full-stack software engineer architecting scalable web platforms, high-performance APIs, and AI-driven solutions. Passionate about clean architecture and delivering robust, real-time applications across modern ecosystems like React, Angular, .NET Core, and Python.
         </motion.p>
 
         <motion.div className="hero__meta"
@@ -588,7 +657,7 @@ function Hero() {
           <motion.a href="#projects" className="cta cta--primary" whileHover={{ scale: 1.04 }} whileTap={{ scale: 0.97 }}>
             View Projects <ChevronRight size={14}/>
           </motion.a>
-          <motion.a href="/resume.pdf" download className="cta cta--ghost" whileHover={{ scale: 1.04 }} whileTap={{ scale: 0.97 }}>
+          <motion.a href="/Vedant_Suthar_Resume.pdf" download className="cta cta--ghost" whileHover={{ scale: 1.04 }} whileTap={{ scale: 0.97 }}>
             <Download size={14}/> Resume
           </motion.a>
           <motion.a href="https://github.com/Vedant43" target="_blank" rel="noreferrer" className="cta cta--ghost" whileHover={{ scale: 1.04 }} whileTap={{ scale: 0.97 }}>
