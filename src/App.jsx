@@ -254,7 +254,7 @@ const PERSONAL_PROJECTS = [
   {
     category: 'Personal Project',
     title: 'VaultFS — Cloud File Management Platform',
-    period: '2025 – In Progress',
+    period: '2026 – In Progress',
     tech: ['Next.js', 'Node.js', 'PostgreSQL', 'GCP', 'Docker'],
     color: '#a855f7',
     github: 'https://github.com/Vedant43',
